@@ -16,4 +16,8 @@ public class Dictionary {
     public String translate(String word) {
         return translations.get(word);
     }
+
+    public int amountOfWords() {
+        return translations.size();
+    }
 }
