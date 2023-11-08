@@ -1,5 +1,6 @@
 package com.karel.program;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Dictionary {
@@ -19,5 +20,13 @@ public class Dictionary {
 
     public int amountOfWords() {
         return translations.size();
+    }
+
+    public ArrayList<String> translationList() {
+        ArrayList<String> list = new ArrayList<>();
+        for (String key : translations.keySet()) {
+            list.add(key + " = " + translations.get(key));
+        }
+        return list;
     }
 }
